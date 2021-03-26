@@ -77,6 +77,7 @@ export default {
         background-image : url('../assets/Home_bg.jpg');
         background-repeat: no-repeat;
         background-size :cover;
+        align-items: center;
 }
 </style>
 
