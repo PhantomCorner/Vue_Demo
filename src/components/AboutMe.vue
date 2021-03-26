@@ -1,6 +1,5 @@
 <template>
 <div class="About">
-    <div class="About-left">
         <div class="menu">
             <ul>
                 <li v-for="(item,index) in MenuItem" :key="index" @click="JumpTo(item.location)">
@@ -11,26 +10,25 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <div class="About-right">
-        <Header :Title="Title" :Content="Content"/>
-        <div class="Content">
-            <div>            
+    <div class="Content">
+            <!-- <div>            
                 <img :src="img" >
-            </div>
+            </div> -->
             <div class="ContentMe">
+                <Header :Title='Title' :Content="Content"/>
                 <p>2017年，就读于新西兰怀卡托大学计算机科学专业。</p>
-                <p>平平无奇四年留学，也结识了不少好朋友。</p>
-                <p>在校期间接触前端。了解Mysql,Jquery,API调用基础,
-                    熟悉H5,Css,Js代码规范</p>
+                <p>有较好的英语读写，交流能力</p>
+                <p>了解Mysql,Jquery,API调用基础,
+                    熟悉H5,Css,Js编写规范</p>
                 <p>注重代码整洁,对新技术富有热情</p>
                 <p>希望能在工作中提升自己的技术水平，精益求精。</p>
             </div>
-        </div>
+            <div class="Workexp">
+                <Workexp />
+            </div>
     </div>
-    <div class="Workexp">
-        <Workexp />
-    </div>
+
+
 </div>
     
 </template>
@@ -45,7 +43,7 @@ export default {
 
     },
     created(){
-        this.imgLoop()
+        //this.imgLoop()
     },
     data(){
         return{
@@ -54,20 +52,20 @@ export default {
                 {text:'关于我',img:require('../assets/user.png'),location:'about'},
             ],
 
-            Title:'普普通通留学生',
-            Content:'About Me',
+            Title:'About Me',
+            Content:'吴亚伦',
 
-            imgList:[
-                {
-                    src:require('../assets/img1.jpg')
-                },
-                {
-                    src:require('../assets/img2.jpg')
-                },
-                // {
-                //     src:require('../assets/img3.jpg')
-                // }
-            ],
+            // imgList:[
+            //     {
+            //         src:require('../assets/img1.jpg')
+            //     },
+            //     {
+            //         src:require('../assets/img2.jpg')
+            //     },
+            //     // {
+            //     //     src:require('../assets/img3.jpg')
+            //     // }
+            // ],
             img:'',
             id:0
         }
@@ -100,34 +98,22 @@ export default {
     height: 100%;
     display:flex;
     margin: 0;
-
 }
-.About-left{
-    background-color :white;
+.menu{
+    font-size: 1.3em;
+    font-weight: 500;
+    width: 170px;
+    height: 100vh;
+    text-align: center;
+    position:relative;
+    float: left;
+    background-color :#e0e0d1;
     width: auto;
     height:100vh;
     line-height: 80px;
     cursor:pointer;
     -webkit-font-smoothing: antialiased;
     font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,微软雅黑,Arial,sans-serif;
-    
-}
-.About-right{
-    flex: 1;
-    height: 100%;
-    display: inline-block;
-
-}
-.menu{
-     font-size: 1.3em;
-     font-weight: 500;
-     width: 170px;
-     height: 100vh;
-     text-align: center;
-     position:relative;
-    float: left;
-
-
 }
 .menu img{
     height: 20px;
@@ -139,24 +125,38 @@ export default {
     display: inline-block;
     margin:0;
     padding:0;
-
 }
 
 .menu li{
  border-bottom:gray 1px dashed;
 }
+.Content{
+    flex: 1;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-orient: vertical;
+}
 .Content img{
-    width: 85%;
+    width:50%;
+    height:50%;
     float: left;
     display: block;
     border-radius: 5px;
     flood-opacity: 2px;
 }
 .ContentMe{
-    float: left;
+    padding-bottom: 15px;
     font-size: 20px;
     line-height: 30px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Workexp{
+    flex: 1;
+    height: 100%;
+    display: inline-block;
+    word-break: break-all;
 }
 
 </style>

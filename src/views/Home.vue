@@ -1,12 +1,13 @@
 <template>
 <!--整体div -->
-<div>
-    <!--首页-->
-    <div class="layout-header" id='homepage'><Test /></div>
-    <!--个人信息-->
-    <div class="layout-about" id='about'><AboutMe /></div>
-   
-</div>
+  <div>
+      <!--首页-->
+      <div class="layout-header" id='homepage'><Test /></div>
+      <!--个人信息-->
+      <div class="layout-about" id='about'><AboutMe /></div>
+
+    
+  </div>
 </template>
 <script>
 
@@ -34,8 +35,6 @@ body{
 }
 .layout-about{
    font-size: 15px;
-   
-
 }
 
 </style>

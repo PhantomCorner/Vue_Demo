@@ -26,7 +26,7 @@ export default {
     
     return{
       show:false,
-      Info:['简简单单会编程','散装江苏人','普普通通留学生'],
+      Info:['散装江苏人','普普通通留学生'],
     }
   },
   created(){
@@ -39,12 +39,11 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
   .Avatar{
     margin :0 auto;
     width: auto;
-    height: auto;
+    height:300px;
     text-align :center;
 
     h1{
@@ -72,14 +71,12 @@ export default {
   text-align :center;
 }
 .homepage{
-        width :100%;
-        height :100vh;
-        justify-content: center;
-        align-items: center;
+        height:100vh;
+        display :flex;
+        position:relative;
         background-image : url('../assets/Home_bg.jpg');
-        background-size :cover;
         background-repeat: no-repeat;
-
+        background-size :cover;
 }
 </style>
 

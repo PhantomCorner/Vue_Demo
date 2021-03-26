@@ -27,6 +27,7 @@ export default {
         padding: .5em 0 0 1.5em;
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 30px;
+        display:inline-block;
     }
     .header span{
         font-size: 18px;
